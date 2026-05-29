@@ -53,17 +53,17 @@ const cardVariants = {
 
 export function Testimonials() {
   return (
-    <section className="bg-[#F5EDE0] py-20 md:py-28">
+    <section className="bg-muted py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-14 text-center">
-          <span className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-[#C41E2B]">
+          <span className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-primary">
             What They Say
           </span>
-          <h2 className="mt-3 font-heading text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-[#1F1A17]">
+          <h2 className="mt-3 font-heading text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-foreground">
             Rave Reviews
           </h2>
-          <p className="mx-auto mt-4 max-w-xl font-body text-lg text-[#6B5E54]">
+          <p className="mx-auto mt-4 max-w-xl font-body text-lg text-muted-foreground">
             Don&apos;t take our word for it. Here&apos;s what our community says.
           </p>
         </div>
@@ -87,22 +87,22 @@ export function Testimonials() {
                 {Array.from({ length: t.rating }).map((_, i) => (
                   <Star
                     key={i}
-                    className="h-4 w-4 fill-[#F59E0B] text-[#F59E0B]"
+                    className="h-4 w-4 fill-accent text-accent"
                   />
                 ))}
               </div>
 
               {/* Quote */}
-              <p className="flex-1 font-body text-[#6B5E54] leading-relaxed">
+              <p className="flex-1 font-body text-muted-foreground leading-relaxed">
                 &ldquo;{t.quote}&rdquo;
               </p>
 
               {/* Author */}
-              <div className="mt-4 border-t border-[#E8DCC8] pt-4">
-                <p className="font-heading text-lg font-bold text-[#1F1A17]">
+              <div className="mt-4 border-t border-border pt-4">
+                <p className="font-heading text-lg font-bold text-foreground">
                   {t.author}
                 </p>
-                <p className="font-body text-sm text-[#6B5E54]">{t.role}</p>
+                <p className="font-body text-sm text-muted-foreground">{t.role}</p>
               </div>
             </motion.div>
           ))}

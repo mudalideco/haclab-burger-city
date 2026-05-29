@@ -18,7 +18,7 @@ function FacebookIcon({ className }: { className?: string }) {
 
 export function LocationContact() {
   return (
-    <section id="contact" className="bg-[#F5EDE0] py-20 md:py-28">
+    <section id="contact" className="bg-muted py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-stretch gap-8 lg:grid-cols-2">
           {/* Left: Contact Info */}
@@ -29,24 +29,24 @@ export function LocationContact() {
             transition={{ duration: 0.6 }}
             className="flex flex-col justify-center rounded-2xl bg-white p-8 shadow-sm md:p-10"
           >
-            <span className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-[#C41E2B]">
+            <span className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-primary">
               Get In Touch
             </span>
-            <h2 className="mt-3 font-heading text-[clamp(2rem,4vw,3rem)] font-bold leading-tight text-[#1F1A17]">
+            <h2 className="mt-3 font-heading text-[clamp(2rem,4vw,3rem)] font-bold leading-tight text-foreground">
               Find Us. Message Us. Eat Well.
             </h2>
 
             <div className="mt-8 space-y-5">
               {/* Address */}
               <div className="flex items-start gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#C41E2B]/10">
-                  <MapPin className="h-5 w-5 text-[#C41E2B]" />
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                  <MapPin className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-heading text-lg font-bold text-[#1F1A17]">
+                  <h3 className="font-heading text-lg font-bold text-foreground">
                     Address
                   </h3>
-                  <p className="font-body text-[#6B5E54]">
+                  <p className="font-body text-muted-foreground">
                     1795 St Clair Ave W
                     <br />
                     Toronto, ON M6N 1J7
@@ -56,16 +56,16 @@ export function LocationContact() {
 
               {/* Phone */}
               <div className="flex items-start gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#C41E2B]/10">
-                  <Phone className="h-5 w-5 text-[#C41E2B]" />
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                  <Phone className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-heading text-lg font-bold text-[#1F1A17]">
+                  <h3 className="font-heading text-lg font-bold text-foreground">
                     Phone
                   </h3>
                   <a
                     href="tel:+16472828467"
-                    className="font-body text-[#C41E2B] underline-offset-2 hover:underline"
+                    className="font-body text-primary underline-offset-2 hover:underline"
                   >
                     (647) 282-8467
                   </a>
@@ -78,14 +78,14 @@ export function LocationContact() {
                   <MessageCircle className="h-5 w-5 text-[#25D366]" />
                 </div>
                 <div>
-                  <h3 className="font-heading text-lg font-bold text-[#1F1A17]">
+                  <h3 className="font-heading text-lg font-bold text-foreground">
                     WhatsApp
                   </h3>
                   <a
                     href="https://wa.me/16472828467"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-body text-[#C41E2B] underline-offset-2 hover:underline"
+                    className="font-body text-primary underline-offset-2 hover:underline"
                   >
                     Message us on WhatsApp
                   </a>
@@ -98,14 +98,14 @@ export function LocationContact() {
                   <FacebookIcon className="h-5 w-5 text-[#1877F2]" />
                 </div>
                 <div>
-                  <h3 className="font-heading text-lg font-bold text-[#1F1A17]">
+                  <h3 className="font-heading text-lg font-bold text-foreground">
                     Facebook
                   </h3>
                   <a
                     href="https://facebook.com/250105012041472"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-body text-[#C41E2B] underline-offset-2 hover:underline"
+                    className="font-body text-primary underline-offset-2 hover:underline"
                   >
                     Follow for daily locations
                   </a>
@@ -114,14 +114,14 @@ export function LocationContact() {
 
               {/* Hours */}
               <div className="flex items-start gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#F59E0B]/10">
-                  <Clock className="h-5 w-5 text-[#F59E0B]" />
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-accent/10">
+                  <Clock className="h-5 w-5 text-accent" />
                 </div>
                 <div>
-                  <h3 className="font-heading text-lg font-bold text-[#1F1A17]">
+                  <h3 className="font-heading text-lg font-bold text-foreground">
                     Hours
                   </h3>
-                  <p className="font-body text-[#6B5E54]">
+                  <p className="font-body text-muted-foreground">
                     Mon–Fri: 11AM – 8PM
                     <br />
                     Weekends: Follow on Facebook
@@ -135,7 +135,7 @@ export function LocationContact() {
               href="https://wa.me/16472828467"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-[#C41E2B] px-6 py-3.5 font-heading text-lg font-bold uppercase tracking-wide text-white shadow-lg transition-all hover:bg-[#A31A24]"
+              className="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3.5 font-heading text-lg font-bold uppercase tracking-wide text-white shadow-lg transition-all hover:bg-primary-hover"
             >
               <MessageCircle className="h-5 w-5" />
               Message Us on WhatsApp

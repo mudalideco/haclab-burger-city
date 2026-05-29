@@ -50,11 +50,11 @@ function Counter({ end, suffix, label, decimals = 0 }: CounterProps) {
 
   return (
     <div ref={ref} className="text-center">
-      <div className="font-heading text-5xl font-bold text-[#C41E2B] sm:text-6xl">
+      <div className="font-heading text-5xl font-bold text-primary sm:text-6xl">
         {count.toFixed(decimals)}
         {suffix}
       </div>
-      <div className="mt-2 font-body text-lg font-medium text-[#1F1A17]">
+      <div className="mt-2 font-body text-lg font-medium text-foreground">
         {label}
       </div>
     </div>
@@ -87,7 +87,7 @@ const itemVariants = {
 
 export function StatsBar() {
   return (
-    <section className="bg-[#F5EDE0] py-20 md:py-24">
+    <section className="bg-muted py-20 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4"

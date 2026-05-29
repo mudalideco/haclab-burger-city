@@ -40,17 +40,17 @@ export function FAQ() {
   };
 
   return (
-    <section id="contact" className="bg-[#FFF8F0] py-20 md:py-28">
+    <section id="contact" className="bg-background py-20 md:py-28">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-14 text-center">
-          <span className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-[#C41E2B]">
+          <span className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-primary">
             FAQ
           </span>
-          <h2 className="mt-3 font-heading text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-[#1F1A17]">
+          <h2 className="mt-3 font-heading text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-foreground">
             Got Questions?
           </h2>
-          <p className="mx-auto mt-4 max-w-xl font-body text-lg text-[#6B5E54]">
+          <p className="mx-auto mt-4 max-w-xl font-body text-lg text-muted-foreground">
             Everything you need to know before you take a bite.
           </p>
         </div>
@@ -60,18 +60,18 @@ export function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="rounded-xl border border-[#E8DCC8] bg-white overflow-hidden"
+              className="rounded-xl border border-border bg-white overflow-hidden"
             >
               <button
-                className="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-[#F5EDE0]"
+                className="flex w-full items-center justify-between px-6 py-5 text-left transition-colors hover:bg-muted"
                 onClick={() => toggleFAQ(index)}
                 aria-expanded={openIndex === index}
               >
-                <span className="font-heading text-lg font-bold text-[#1F1A17] pr-4">
+                <span className="font-heading text-lg font-bold text-foreground pr-4">
                   {faq.question}
                 </span>
                 <ChevronDown
-                  className={`h-5 w-5 shrink-0 text-[#C41E2B] transition-transform duration-300 ${
+                  className={`h-5 w-5 shrink-0 text-primary transition-transform duration-300 ${
                     openIndex === index ? "rotate-180" : ""
                   }`}
                 />
@@ -85,8 +85,8 @@ export function FAQ() {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="border-t border-[#E8DCC8] px-6 py-4">
-                      <p className="font-body text-[#6B5E54] leading-relaxed">
+                    <div className="border-t border-border px-6 py-4">
+                      <p className="font-body text-muted-foreground leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const images = [
@@ -59,17 +60,17 @@ const imageVariants = {
 
 export function Gallery() {
   return (
-    <section className="bg-[#FFF8F0] py-20 md:py-28">
+    <section className="bg-background py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-14 text-center">
-          <span className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-[#C41E2B]">
+          <span className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-primary">
             Gallery
           </span>
-          <h2 className="mt-3 font-heading text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-[#1F1A17]">
+          <h2 className="mt-3 font-heading text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-foreground">
             Taste the Vibe
           </h2>
-          <p className="mx-auto mt-4 max-w-xl font-body text-lg text-[#6B5E54]">
+          <p className="mx-auto mt-4 max-w-xl font-body text-lg text-muted-foreground">
             A glimpse of what we serve and where we roll.
           </p>
         </div>
@@ -88,9 +89,11 @@ export function Gallery() {
               className={`group relative overflow-hidden rounded-xl ${image.span}`}
               variants={imageVariants}
             >
-              <img
+              <Image
                 src={image.src}
                 alt={image.alt}
+                width={600}
+                height={index === 1 ? 400 : 200}
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 style={{ minHeight: index === 1 ? "400px" : "200px" }}
               />

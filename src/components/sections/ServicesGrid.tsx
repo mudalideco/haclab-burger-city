@@ -49,17 +49,17 @@ const cardVariants = {
 
 export function ServicesGrid() {
   return (
-    <section className="bg-[#FFF8F0] py-20 md:py-28">
+    <section className="bg-background py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-14 text-center">
-          <span className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-[#C41E2B]">
+          <span className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-primary">
             What We Serve
           </span>
-          <h2 className="mt-3 font-heading text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-[#1F1A17]">
+          <h2 className="mt-3 font-heading text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-foreground">
             Made Fresh. Made Right.
           </h2>
-          <p className="mx-auto mt-4 max-w-xl font-body text-lg text-[#6B5E54]">
+          <p className="mx-auto mt-4 max-w-xl font-body text-lg text-muted-foreground">
             Every item on our menu starts with quality ingredients and a whole
             lot of flavor.
           </p>
@@ -79,13 +79,13 @@ export function ServicesGrid() {
               className="group rounded-xl bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
               variants={cardVariants}
             >
-              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-[#C41E2B]/10 text-[#C41E2B] transition-colors group-hover:bg-[#C41E2B] group-hover:text-white">
+              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
                 <service.icon className="h-7 w-7" />
               </div>
-              <h3 className="font-heading text-xl font-bold text-[#1F1A17]">
+              <h3 className="font-heading text-xl font-bold text-foreground">
                 {service.title}
               </h3>
-              <p className="mt-3 font-body text-[#6B5E54]">
+              <p className="mt-3 font-body text-muted-foreground">
                 {service.description}
               </p>
             </motion.div>

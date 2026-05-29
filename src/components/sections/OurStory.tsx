@@ -1,10 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export function OurStory() {
   return (
-    <section className="bg-[#F5EDE0] py-20 md:py-28">
+    <section className="bg-muted py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           {/* Left: Content */}
@@ -14,14 +15,14 @@ export function OurStory() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <span className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-[#C41E2B]">
+            <span className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-primary">
               Our Story
             </span>
-            <h2 className="mt-3 font-heading text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-[#1F1A17]">
+            <h2 className="mt-3 font-heading text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-foreground">
               Born on St. Clair West
             </h2>
 
-            <div className="mt-6 space-y-4 font-body text-lg leading-relaxed text-[#6B5E54]">
+            <div className="mt-6 space-y-4 font-body text-lg leading-relaxed text-muted-foreground">
               <p>
                 Burger City was born from a simple belief — great burgers don&apos;t
                 need to be complicated. Just fresh beef, quality ingredients, and
@@ -41,8 +42,8 @@ export function OurStory() {
             </div>
 
             {/* Pull Quote */}
-            <div className="relative mt-8 border-l-4 border-[#C41E2B] bg-white/60 pl-6 py-4 italic">
-              <p className="font-heading text-2xl font-bold text-[#1F1A17]">
+            <div className="relative mt-8 border-l-4 border-primary bg-white/60 pl-6 py-4 italic">
+              <p className="font-heading text-2xl font-bold text-foreground">
                 &ldquo;Fresh beef. Hot grill. No shortcuts. That&apos;s the deal.&rdquo;
               </p>
             </div>
@@ -57,15 +58,17 @@ export function OurStory() {
             className="relative"
           >
             <div className="relative overflow-hidden rounded-2xl shadow-xl">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&q=80"
                 alt="Burger City food truck preparing fresh burgers"
+                width={800}
+                height={550}
                 className="h-[450px] w-full object-cover lg:h-[550px]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
             {/* Decorative element */}
-            <div className="absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-2xl border-2 border-[#C41E2B]/20" />
+            <div className="absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-2xl border-2 border-primary/20" />
           </motion.div>
         </div>
       </div>

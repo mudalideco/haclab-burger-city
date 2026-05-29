@@ -5,7 +5,7 @@ import { Truck } from "lucide-react";
 
 export function StatementBar() {
   return (
-    <section className="relative overflow-hidden bg-[#C41E2B] py-6">
+    <section className="relative overflow-hidden bg-primary py-6">
       <motion.div
         className="flex items-center justify-center gap-4 whitespace-nowrap px-4"
         animate={{ x: [0, "-50%"] }}

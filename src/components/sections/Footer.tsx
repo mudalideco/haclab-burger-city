@@ -26,7 +26,7 @@ const quickLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-[#1F2937]">
+    <footer className="bg-secondary">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <motion.div
           className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3"
@@ -41,9 +41,9 @@ export function Footer() {
               href="#"
               className="font-heading text-2xl font-bold tracking-tight text-white"
             >
-              Burger<span className="text-[#C41E2B]"> City</span>
+              Burger<span className="text-primary"> City</span>
             </a>
-            <p className="mt-3 font-body text-[#9CA3AF] leading-relaxed">
+            <p className="mt-3 font-body text-gray-400 leading-relaxed">
               Fresh Burgers on St. Clair West. Serving Toronto since 2021.
             </p>
             <div className="mt-5 flex gap-3">
@@ -78,7 +78,7 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="font-body text-[#9CA3AF] transition-colors hover:text-white"
+                    className="font-body text-gray-400 transition-colors hover:text-white"
                   >
                     {link.label}
                   </a>
@@ -98,7 +98,7 @@ export function Footer() {
                   href="https://facebook.com/250105012041472"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 font-body text-[#9CA3AF] transition-colors hover:text-white"
+                  className="flex items-center gap-2 font-body text-gray-400 transition-colors hover:text-white"
                 >
                   <FacebookIcon className="h-4 w-4" />
                   Follow on Facebook
@@ -109,7 +109,7 @@ export function Footer() {
                   href="https://wa.me/16472828467"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 font-body text-[#9CA3AF] transition-colors hover:text-white"
+                  className="flex items-center gap-2 font-body text-gray-400 transition-colors hover:text-white"
                 >
                   <MessageCircle className="h-4 w-4" />
                   Message on WhatsApp
@@ -118,7 +118,7 @@ export function Footer() {
               <li>
                 <a
                   href="tel:+16472828467"
-                  className="flex items-center gap-2 font-body text-[#9CA3AF] transition-colors hover:text-white"
+                  className="flex items-center gap-2 font-body text-gray-400 transition-colors hover:text-white"
                 >
                   <Phone className="h-4 w-4" />
                   (647) 282-8467
@@ -133,10 +133,10 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-            <p className="font-body text-sm text-[#6B7280]">
+            <p className="font-body text-sm text-gray-500">
               &copy; {new Date().getFullYear()} Burger City. All rights reserved.
             </p>
-            <p className="font-body text-sm text-[#6B7280]">
+            <p className="font-body text-sm text-gray-500">
               Powered by{" "}
               <a
                 href="https://haclab.net"

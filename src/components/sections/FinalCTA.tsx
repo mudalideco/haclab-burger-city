@@ -6,7 +6,7 @@ import { MagneticButton } from "@/components/primitives/MagneticButton";
 
 export function FinalCTA() {
   return (
-    <section className="relative overflow-hidden bg-[#C41E2B] py-20 md:py-28">
+    <section className="relative overflow-hidden bg-primary py-20 md:py-28">
       {/* Decorative pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -40,7 +40,7 @@ export function FinalCTA() {
               href="https://wa.me/16472828467"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 font-heading text-lg font-bold uppercase tracking-wide text-[#C41E2B] shadow-lg transition-all hover:bg-white/90"
+              className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 font-heading text-lg font-bold uppercase tracking-wide text-primary shadow-lg transition-all hover:bg-white/90"
             >
               <MessageCircle className="h-5 w-5" />
               Message Us on WhatsApp

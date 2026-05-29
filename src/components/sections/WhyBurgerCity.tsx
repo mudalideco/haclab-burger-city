@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Beef, Heart, Users, PartyPopper } from "lucide-react";
 
@@ -37,7 +38,7 @@ const itemVariants = {
 
 export function WhyBurgerCity() {
   return (
-    <section className="bg-[#FFF8F0] py-20 md:py-28">
+    <section className="bg-background py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           {/* Left: Content */}
@@ -47,10 +48,10 @@ export function WhyBurgerCity() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-[#C41E2B]">
+            <span className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-primary">
               Why Burger City
             </span>
-            <h2 className="mt-3 font-heading text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-[#1F1A17]">
+            <h2 className="mt-3 font-heading text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-foreground">
               The Difference Is in Every Bite
             </h2>
 
@@ -64,14 +65,14 @@ export function WhyBurgerCity() {
                   whileInView="visible"
                   viewport={{ once: true }}
                 >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#C41E2B]/10">
-                    <benefit.icon className="h-6 w-6 text-[#C41E2B]" />
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10">
+                    <benefit.icon className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-heading text-xl font-bold text-[#1F1A17]">
+                    <h3 className="font-heading text-xl font-bold text-foreground">
                       {benefit.title}
                     </h3>
-                    <p className="mt-1 font-body text-[#6B5E54]">
+                    <p className="mt-1 font-body text-muted-foreground">
                       {benefit.description}
                     </p>
                   </div>
@@ -88,13 +89,15 @@ export function WhyBurgerCity() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=800&q=80"
               alt="Delicious burger being prepared"
+              width={800}
+              height={500}
               className="h-[500px] w-full rounded-2xl object-cover shadow-xl"
             />
             {/* Overlay Badge */}
-            <div className="absolute -bottom-4 -left-4 rounded-xl bg-[#C41E2B] px-6 py-3 shadow-lg">
+            <div className="absolute -bottom-4 -left-4 rounded-xl bg-primary px-6 py-3 shadow-lg">
               <p className="font-heading text-lg font-bold text-white">
                 Quality You Can Taste
               </p>

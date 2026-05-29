@@ -24,7 +24,7 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#1F2937]/95 backdrop-blur-md shadow-lg"
+          ? "bg-secondary/95 backdrop-blur-md shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -35,7 +35,7 @@ export function Header() {
             href="#"
             className="font-heading text-2xl font-bold tracking-tight text-white"
           >
-            Burger<span className="text-[#C41E2B]"> City</span>
+            Burger<span className="text-primary"> City</span>
           </a>
 
           {/* Desktop Nav */}
@@ -56,7 +56,7 @@ export function Header() {
             href="https://wa.me/16472828467"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-lg bg-[#C41E2B] px-5 py-2.5 font-body text-sm font-bold text-white transition-all hover:bg-[#A31A24] md:inline-block"
+            className="hidden rounded-lg bg-primary px-5 py-2.5 font-body text-sm font-bold text-white transition-all hover:bg-primary-hover md:inline-block"
           >
             Order Now
           </a>
@@ -74,7 +74,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="border-t border-white/10 bg-[#1F2937] md:hidden">
+        <div className="border-t border-white/10 bg-secondary md:hidden">
           <div className="space-y-2 px-4 py-4">
             {NAV_LINKS.map((link) => (
               <a
@@ -90,7 +90,7 @@ export function Header() {
               href="https://wa.me/16472828467"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 block rounded-lg bg-[#C41E2B] px-4 py-3 text-center font-body text-base font-bold text-white transition-colors hover:bg-[#A31A24]"
+              className="mt-2 block rounded-lg bg-primary px-4 py-3 text-center font-body text-base font-bold text-white transition-colors hover:bg-primary-hover"
               onClick={() => setMobileOpen(false)}
             >
               Order Now

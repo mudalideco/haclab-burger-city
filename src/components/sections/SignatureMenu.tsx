@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 
@@ -67,17 +68,17 @@ const cardVariants = {
 
 export function SignatureMenu() {
   return (
-    <section id="menu" className="bg-[#FFF8F0] py-20 md:py-28">
+    <section id="menu" className="bg-background py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-14 text-center">
-          <span className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-[#C41E2B]">
+          <span className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-primary">
             Our Menu
           </span>
-          <h2 className="mt-3 font-heading text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-[#1F1A17]">
+          <h2 className="mt-3 font-heading text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-foreground">
             The Signature Lineup
           </h2>
-          <p className="mx-auto mt-4 max-w-xl font-body text-lg text-[#6B5E54]">
+          <p className="mx-auto mt-4 max-w-xl font-body text-lg text-muted-foreground">
             Every burger is smashed to order. Every fry is cut fresh. Every meal
             is served with a side of good vibes.
           </p>
@@ -95,35 +96,37 @@ export function SignatureMenu() {
             <motion.div
               key={item.name}
               className={`group relative overflow-hidden rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md ${
-                item.featured ? "ring-2 ring-[#C41E2B]" : ""
+                item.featured ? "ring-2 ring-primary" : ""
               }`}
               variants={cardVariants}
             >
               {/* Image */}
               <div className="relative h-48 overflow-hidden">
-                <img
+                <Image
                   src={item.image}
                   alt={item.name}
+                  width={600}
+                  height={400}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 {item.featured && (
-                  <div className="absolute top-3 right-3 flex items-center gap-1 rounded-full bg-[#F59E0B] px-3 py-1 font-heading text-xs font-bold uppercase text-white">
+                  <div className="absolute top-3 right-3 flex items-center gap-1 rounded-full bg-accent px-3 py-1 font-heading text-xs font-bold uppercase text-white">
                     <Star className="h-3 w-3 fill-white" />
                     Best Seller
                   </div>
                 )}
                 {/* Price Badge */}
-                <div className="absolute bottom-3 left-3 rounded-lg bg-[#C41E2B] px-3 py-1.5 font-heading text-lg font-bold text-white shadow-lg">
+                <div className="absolute bottom-3 left-3 rounded-lg bg-primary px-3 py-1.5 font-heading text-lg font-bold text-white shadow-lg">
                   {item.price}
                 </div>
               </div>
 
               {/* Content */}
               <div className="p-5">
-                <h3 className="font-heading text-xl font-bold text-[#1F1A17]">
+                <h3 className="font-heading text-xl font-bold text-foreground">
                   {item.name}
                 </h3>
-                <p className="mt-2 font-body text-sm leading-relaxed text-[#6B5E54]">
+                <p className="mt-2 font-body text-sm leading-relaxed text-muted-foreground">
                   {item.description}
                 </p>
               </div>

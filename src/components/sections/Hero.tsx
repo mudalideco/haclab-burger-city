@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { MagneticButton } from "@/components/primitives/MagneticButton";
 
@@ -42,9 +43,11 @@ export function Hero() {
     >
       {/* Background Image with Overlay */}
       <div ref={bgRef} className="absolute inset-0 scale-110">
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1920&q=80"
           alt="Delicious burger with fresh ingredients"
+          width={1920}
+          height={1080}
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/50" />
@@ -81,7 +84,7 @@ export function Hero() {
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <MagneticButton
             href="#locations"
-            className="inline-flex items-center gap-2 rounded-lg bg-[#C41E2B] px-8 py-4 font-heading text-lg font-bold uppercase tracking-wide text-white shadow-lg transition-all hover:bg-[#A31A24]"
+            className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 font-heading text-lg font-bold uppercase tracking-wide text-white shadow-lg transition-all hover:bg-primary-hover"
           >
             Find Us Today
           </MagneticButton>
